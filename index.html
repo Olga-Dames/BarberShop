@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -18,30 +19,30 @@
       /></a>
       <nav>
         <ul class="list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services and prices</a></li>
-          <li><a href="#barbers">Barbers</a></li>
-          <li><a href="#contacts">Contacts</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#services">Services and prices</a></li>
+          <li><a class="nav-link" href="#barbers">Barbers</a></li>
+          <li><a class="nav-link" href="#contacts">Contacts</a></li>
         </ul>
       </nav>
-      <a href="tel:+380441111111">+38 044 111 11 11</a>
-      <button type="button">Online-booking</button>
+      <a class="tel" href="tel:+380441111111">+38 044 111 11 11</a>
+      <button class="btn" type="button">Online-booking</button>
     </header>
     <main>
       <section class="hero">
-        <h1>A hair salon for men in Kyiv</h1>
-        <h2>BarberShop</h2>
+        <h1 class="hero-heading">A hair salon for men in Kyiv</h1>
+        <h2 class="hero-title">BarberShop</h2>
         <p>
           We are experts in trendy men’s haircuts. We work quickly, carefully
           and with style.
         </p>
         <ul class="list">
-          <li><a href="#" target="_blank" rel="noopener nofollow noreferrer">Instagram</a></li>
-          <li><a href="#" target="_blank" rel="noopener nofollow noreferrer">Youtube</a></li>
+          <li><a class="social-link" href="#" target="_blank" rel="noopener nofollow noreferrer">Instagram</a></li>
+          <li><a class="social-link" href="#" target="_blank" rel="noopener nofollow noreferrer">Youtube</a></li>
         </ul>
       </section>
       <section class="about">
-                <ul>
+                <ul class="list">
           <li>
             <img
               src="./images/haircut1.jpg"
@@ -57,24 +58,24 @@
             />
           </li>
         </ul>
-        <h2 id="about">About</h2>
-        <h3>Best Barbershop in your city</h3>
-        <p>
+        <h2 class="section-heading" id="about">About</h2>
+        <h3 class="section-title">Best Barbershop in your city</h3>
+        <p class="descr">
           If you want to add more confidence to your image, you should
           definitely visit us.
         </p>
-        <p>
+        <p class="paragraph">
           We are a team that never stops at what has been achieved and are
           thirsty for changes. And when you fall into the hands of our master,
           you will never be the same again. We are a team that is always "on the
           same wave" with clients. Therefore, we are always ready to improve
           everyone who comes to us!
         </p>
-        <button type="button">ONLINE-BOOKING</button>
+        <button class="btn" type="button">ONLINE-BOOKING</button>
       </section>
       <section class="services">
-        <h2 id="services">Spend your time with the best masters</h2>
-        <h3>Services and prices</h3>
+        <h2 class="section-heading" id="services">Spend your time with the best masters</h2>
+        <h3 class="section-title">Services and prices</h3>
         <ul class="price list">
           <li>
             <p>Men’s haircut</p>
@@ -111,7 +112,7 @@
             <p>from 200 uah.</p>
           </li>
         </ul>
-        <button type="button">online-booking</button>
+        <button class="btn" type="button">online-booking</button>
       </section>
       <section class="statistics">
         <ul class="list">
@@ -132,14 +133,14 @@
             <p>Gifts for regular customers</p>
           </li>
         </ul>
-        <h2>Old traditional school</h2>
-        <h3>&#191 Why people come to us?</h3>
+        <h2 class="section-heading">Old traditional school</h2>
+        <h3 class="section-title">&#191 Why people come to us?</h3>
         <p>Only good things are said about us. But it's better to see and feel 1 time than read 10 times. </p>
         
       </section>
       <section class="barbers">
-        <h2 id="barbers">For true enjoyers of the atmosphere</h2>
-        <h3>Our barbers</h3>
+        <h2 class="section-heading" id="barbers">For true enjoyers of the atmosphere</h2>
+        <h3 class="section-title">Our barbers</h3>
         <ul class="list">
           <li>
             <img src="./images/barber1.jpg" alt="Extreme Barber John Smith" width="370"/>
@@ -177,7 +178,7 @@
         </ul>
       </section>
       <section class="gallery">
-        <h2>In Latin, "barba" means "beard"</h2>
+        <h2 class="section-heading">In Latin, "barba" means "beard"</h2>
         <ul class="list">
           <li><img src="./images/image1.jpg" alt="barber is trimming hair" width="270"></li>
           <li><img src="./images/image2.jpg" alt="barber is shaving a man" width="270"></li>
@@ -186,9 +187,9 @@
         </ul>
       </section>
       <section class="contacts">
-        <h2 id="contacts">how to find us</h2>
+        <h2 class="visually-hidden" id="contacts">how to find us</h2>
         <div>
-          <h3>Online-booking</h3>
+          <h3 class="section-title">Online-booking</h3>
           <form action="#">
             <input type="text" name="name" placeholder="name&#65121">
             <input type="text" name="phone" placeholder="phone&#65121">
@@ -197,7 +198,7 @@
           </form>
         </div>
         <div>
-          <h3>Contacts</h3>
+          <h3 class="section-title">Contacts</h3>
           <address>
             <ul class="list">
               <li><a href="https://goo.gl/maps/W5LmpzTwFQaC8Xu78" target="_blank" rel="noopener noffolow noreferrer">st. Vasilkovaya, 7A <br> Kiev, 08132</a></li>

@@ -1,0 +1,124 @@
+:root {
+  --primary-color:#303030;
+  --secondary-color:#9DA4BD;
+  --paragraph-volor:#555555;
+  --white-text-color:#FFFFFF;
+  --heading-color:rgba(157, 164, 189, 0.6);
+  --primary-bg-color:;
+  --accent-color:#FF6C00;
+  --primary-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Raleway',sans-serif;
+}
+body {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  color: var(--primary-color);
+  letter-spacing: 0.02em;
+}
+h1,h2,h3,h4,h5,h6,ul,p {
+  margin: 0;
+}
+.list {
+  padding: 0;
+  list-style: none;
+}
+/* header */
+header {
+  background-color: aqua;
+}
+.nav-link, .tel, .btn {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: var(--white-text-color);
+  text-decoration: none;
+}
+.tel {
+  text-transform: uppercase;
+}
+.btn {
+  padding: 12px 20px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+}
+.btn:hover {
+  background-color: var(--accent-color);
+}
+/* hero section */
+.hero {
+  background-color: palegreen;
+}
+.hero-heading {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: var(--heading-color);
+}
+.hero-title {
+  font-family: var(--secondary-font);
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  color: var(--white-text-color);
+}
+.hero p {
+  font-size: 18px;
+  line-height: 1.67;
+  color: var(--secondary-color);
+}
+.social-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-decoration: none;
+}
+/* main part */
+.section-heading {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+.section-title {
+  font-family: var(--secondary-font);
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+.section-title:nth-child(2),
+.section-title:nth-child(-n+2) {
+  color: var(--white-text-color);
+}
+
+/* about */
+.descr {
+  font-size: 18px;
+  line-height: 1.67;
+  color: var(--paragraph-volor);
+}
+.paragraph {
+    line-height: 1.86;
+    color:var(--paragraph-volor);
+}
+
+/* contacts */
+.contacts {
+  background-color: paleturquoise;
+}
+
+/* services */
+.services p {
+  font-size: 18px;
+  line-height: 1.67;
+  color:var(--secondary-color);
+}
+
+/* footer */
+footer {
+  background-color: palevioletred;
+}
