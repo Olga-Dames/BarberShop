@@ -22,9 +22,40 @@ h1,h2,h3,h4,h5,h6,ul,p {
   padding: 0;
   list-style: none;
 }
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  outline: 1px solid purple;
+}
+.section {
+  padding: 120px 0;
+}
 /* header */
 header {
   background-color: aqua;
+}
+.logo {
+  margin-right: 130px;
+}
+.head.container {
+  display: flex;
+}
+.nav-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.sidebar {
+  width: 155px;
+  outline: 1px solid red;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-item:not(:last-child) {
+  margin-right: 30px;
 }
 .nav-link, .tel, .btn {
   font-weight: 600;
@@ -34,10 +65,22 @@ header {
   color: var(--white-text-color);
   text-decoration: none;
 }
+.nav-link {
+  display: block;
+  padding: 20px 0;
+}
+.contact-part {
+  margin-left: auto;
+}
 .tel {
+  margin-right: 40px;
   text-transform: uppercase;
 }
+.btn.hero {
+  margin-right: 10px;
+}
 .btn {
+  margin: 0;
   padding: 12px 20px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -117,8 +160,95 @@ header {
   line-height: 1.67;
   color:var(--secondary-color);
 }
+.service-heading.transparent {
+  color: var(--heading-color);
+}
+
+/* statistics */
+sup {
+  color: var(--accent-color);
+}
+.number {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.number-descr {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+}
+
+/* barbers */
+.barbers h4 {
+  font-size: 18px;
+  line-height: 1.39;
+}
+.extreme {
+  font-size: 14px;
+  line-height: 1.36;
+  color: var(--accent-color);
+}
+
+/* gallery */
+.gallery .section-heading {
+  margin-bottom: 44px;
+}
+.gallery.list {
+  display: flex;
+}
+.gallery-item:not(:last-child) {
+  margin-right: 30px;
+}
+/* contacts */
+.address {
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.67;
+  color: var(--secondary-color);
+}
+.address.tel {
+  font-weight: 400;
+}
+.address.mail {
+font-weight: 400;
+text-decoration-line: underline;
+}
+.working-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+}
+.working-time {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  color:var(--secondary-color);
+}
 
 /* footer */
-footer {
-  background-color: palevioletred;
+.copy {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  color: var(--secondary-color);
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
