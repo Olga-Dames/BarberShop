@@ -1,0 +1,26 @@
+.slider__list {
+  @extend %list;
+  display: flex;
+  gap: 24px;
+}
+.slider__btn {
+  min-width: 60px;
+  min-height: 24px;
+  margin: 0;
+  padding:0;
+  padding-bottom: 8px;
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: rgba(157, 164, 189, 0.6);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+  color: $light-text-color;
+  }
+}

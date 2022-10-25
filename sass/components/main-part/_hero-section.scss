@@ -1,0 +1,35 @@
+.hero {
+  background-color: $dark-bg-color;
+
+  &__wrapper {
+
+  }
+  
+  &__title {
+    @extend %title;
+    @extend %title-light;
+  }
+  &__heading {
+    @extend %heading;
+    @extend %heading-light;
+    margin-bottom: 20px;
+    font-size: 72px;
+    line-height: 1.18;
+  }
+  &__descr {
+    color: $secondary-color;
+  }
+}
+
+.hero__social-list {
+  @extend %list;
+  display: flex;
+  gap: 40px;
+}
+.hero__social-link {
+  @extend %link;
+  color: $primary-color;
+  line-height: 1.36;
+  font-size: 11px;
+}
+

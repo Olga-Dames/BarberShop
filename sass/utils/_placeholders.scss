@@ -1,14 +1,47 @@
 %btn {
+  max-width: 250px;
+  min-width: 160px;
+  min-height: 40px;
   margin: 0;
   padding: 12px 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  color: $light-text-color;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   background-color: transparent;
   border: 1px solid $accent-color;
-  border-radius: 25px;
+  border-radius: $border-radius;
+  cursor: pointer;
 
-&:hover {
-    background-color: var(--accent-color);
+&:hover,
+&:focus {
+    background-color: $accent-color;
+  }
+}
+
+%btn-light {
+  max-width: 250px;
+  min-width: 160px;
+  min-height: 40px;
+  margin: 0;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  color: $primary-color;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid $accent-color;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $light-text-color;
   }
 }
 
@@ -20,9 +53,39 @@
 %link {
   text-decoration: none;
   color: currentColor;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33px;
+  letter-spacing: 0.1em;
+  color: $light-text-color;
 
 &:hover,
 &:focus {
-  color: var(--accent-color);
+  color: $accent-color;
   }
+}
+
+%title {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+%title-light {
+  color: $heading-color;
+}
+%heading {
+  margin-bottom: 44px;
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+
+%heading-light {
+  color: $light-text-color;
 }

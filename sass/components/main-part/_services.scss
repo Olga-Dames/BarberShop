@@ -1,0 +1,20 @@
+.services {
+background-color: $dark-bg-color;
+
+&__title {
+  @extend %title, %title-light;
+}
+
+&__heading {
+  @extend %heading, %heading-light;
+}
+
+&__wrapper {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+}
+.services__price-list {
+  @extend %list;
+}

@@ -1,0 +1,39 @@
+.about__wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.about__list {
+  @extend %list;
+  display: flex;
+  gap: 30px;
+
+&-item {
+  width: 270px;
+}
+}
+
+.about__textbox {
+  width: 470px;
+&-title {
+  @extend %title;
+  }
+&-heading {
+  @extend %heading;
+  margin-bottom: 20px;
+}
+&-descr {
+  color: $paragraph-color;
+  margin-bottom: 20px;
+}
+&-paragraph {
+  font-size: 14px;
+  line-height: 1.86;
+  color: $paragraph-color;
+  margin-bottom: 42px;
+}
+}
+.about__btn {
+  @extend %btn-light;
+  color: $primary-color;
+}

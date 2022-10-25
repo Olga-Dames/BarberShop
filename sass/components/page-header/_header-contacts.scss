@@ -1,0 +1,12 @@
+.header__contacts {
+margin-left: auto;
+}
+
+.header__contacts-tel {
+  @extend %link;
+  margin-right: 40px;
+}
+
+.header__contacts-btn {
+  @extend %btn;
+}
