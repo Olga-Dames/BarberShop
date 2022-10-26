@@ -1,0 +1,112 @@
+.contacts {
+padding-top: 130px;
+background-color: $dark-bg-color;
+&__wrapper {
+  display: flex;
+}
+&__booking-heading {
+  @extend %heading, %heading-light;
+}
+}
+.contacts__booking {
+  padding-right: 30px;
+} 
+.contacts__input-wrapper {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 44px;
+}
+.contacts__input {
+  display: block;
+  width: 270px;
+  padding-bottom: 8px;
+  background-color: transparent;
+  color: $light-text-color;
+  border: none;
+  border-bottom: 1px solid $form-color;
+  cursor: pointer;
+
+&:focus {
+    outline: none;
+    border-bottom: 1px solid $light-text-color;
+  }
+&::placeholder {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $form-color;
+}
+&:focus::placeholder {
+  color: $light-text-color;
+}
+}
+.contacts__textarea {
+  width: 100%;
+  height: 76px;
+  margin-bottom: 44px;
+  border: none;
+  border-bottom: 1px solid $form-color;
+  background-color: transparent;
+  color: $light-text-color;
+  cursor: pointer;
+  resize: none;
+
+&::placeholder {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $form-color;
+}
+&:focus {
+  outline: none;
+  border-bottom: 1px solid $light-text-color;
+}
+&:focus::placeholder {
+  color: $light-text-color;
+}
+}
+.contacts__button {
+  @extend %btn;
+  display: block;
+}
+
+.address__heading {
+  @extend %heading, %heading-light;
+  margin-bottom: 40px;
+}
+.address__list {
+  @extend %list;
+  margin-bottom: 70px;
+
+&--map {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  color: $secondary-color;
+}
+&--tel {
+  font-style: normal;
+  text-decoration: none;
+  color: $secondary-color;
+}
+&--mail {
+  font-style: normal;
+  text-decoration-line: underline;
+  color: $secondary-color;
+}
+}
+.address__list-item:not(:last-child) {
+  margin-bottom:20px;
+}
+.schedule__title {
+  @extend %title;
+  margin-bottom: 20px;
+  color: $light-text-color;
+}
+.schedule__time {
+    color: #9DA4BD;
+}

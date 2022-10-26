@@ -1,0 +1,10 @@
+.gallery__title {
+  @extend %title;
+  margin-bottom: 44px;
+}
+.gallery__list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}

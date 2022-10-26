@@ -1,0 +1,21 @@
+.footer__wrapper {
+  padding: 56px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.footer__copyright {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  color: $secondary-color;
+}
+.footer__list {
+  @extend %list;
+  display: flex;
+  gap: 40px;
+}
+.footer__social-link {
+  @extend %link;
+  color: $primary-color;
+}
