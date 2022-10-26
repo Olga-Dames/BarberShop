@@ -73,10 +73,12 @@ background-color: $dark-bg-color;
   @extend %btn;
   display: block;
 }
-
-.address__heading {
+.address {
+  padding-left: 100px;
+&__heading {
   @extend %heading, %heading-light;
   margin-bottom: 40px;
+}
 }
 .address__list {
   @extend %list;
