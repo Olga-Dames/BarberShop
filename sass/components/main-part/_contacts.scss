@@ -1,6 +1,36 @@
 .contacts {
 padding-top: 130px;
 background-color: $dark-bg-color;
+background-image: url(../../../images/mobile/mobile-footer-bg.png);
+background-repeat: no-repeat;
+background-size: 50% 100%;
+background-position: 100%;
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/mobile/mobile-footer-bg@2x.png);
+  }
+
+  @media screen and (min-width:$tablet) {
+    background-image: url(../images/Tablet/tablet-footer-bg.png);
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/Tablet/tablet-footer-bg@2x.png);
+    }
+  }
+
+  @media screen and (min-width:$desktop) {
+    background-image: url(../images/desktop/desktop-footer-bg.png);
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/desktop/desktop-footer-bg@2x.png);
+    }
+  }
 &__wrapper {
   display: flex;
 }
@@ -25,6 +55,7 @@ background-color: $dark-bg-color;
   border: none;
   border-bottom: 1px solid $form-color;
   cursor: pointer;
+  transition: border-bottom 250ms $cubic;
 
 &:focus {
     outline: none;
@@ -37,6 +68,8 @@ background-color: $dark-bg-color;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $form-color;
+  transition: color 250ms $cubic,
+              border-bottom 250ms $cubic;
 }
 &:focus::placeholder {
   color: $light-text-color;
@@ -52,6 +85,7 @@ background-color: $dark-bg-color;
   color: $light-text-color;
   cursor: pointer;
   resize: none;
+  transition: border-bottom 250ms $cubic;
 
 &::placeholder {
   font-weight: 600;
@@ -60,6 +94,7 @@ background-color: $dark-bg-color;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $form-color;
+  transition: color 250ms $cubic;
 }
 &:focus {
   outline: none;
@@ -72,6 +107,7 @@ background-color: $dark-bg-color;
 .contacts__button {
   @extend %btn;
   display: block;
+  transition: background-color 250ms $cubic;
 }
 .address {
   padding-left: 100px;
@@ -85,29 +121,43 @@ background-color: $dark-bg-color;
   margin-bottom: 70px;
 
 &--map {
+  display: flex;
+  align-items: start;
   text-decoration: none;
   font-style: normal;
   font-weight: 700;
   color: $secondary-color;
 }
 &--tel {
+  display: flex;
+  align-items: center;
   font-style: normal;
   text-decoration: none;
   color: $secondary-color;
 }
 &--mail {
+  display: flex;
+  align-items: center;
   font-style: normal;
   text-decoration-line: underline;
   color: $secondary-color;
 }
 }
-.address__list-item:not(:last-child) {
-  margin-bottom:20px;
+.address__icon {
+  margin-right: 16px;
 }
+.address__list-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
 .schedule__title {
   @extend %title;
   margin-bottom: 20px;
   color: $light-text-color;
+
+  &::before {
+    background-color: rgba(157, 164, 189, 0.4);
+  }
 }
 .schedule__time {
     color: #9DA4BD;

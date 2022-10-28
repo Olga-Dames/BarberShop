@@ -1,8 +1,12 @@
 .hero {
-  background-color: $dark-bg-color;
-
+  &__container {
+    position: relative;
+  }
   &__wrapper {
-
+    position: absolute;
+    left: 200px;
+    top: 270px;
+    z-index: 10;
   }
   
   &__title {
@@ -23,13 +27,28 @@
 
 .hero__social-list {
   @extend %list;
+  position: absolute;
+  left: -85px;
+  bottom: 160px;
   display: flex;
+  align-items: center;
   gap: 40px;
+  transform: rotate(-90deg);
+
+&::before {
+      content: "";
+      display: inline-block;
+      margin-right: 20px;
+      height: 1px;
+      width: 60px;
+      background-color: $primary-color;
+}
 }
 .hero__social-link {
   @extend %link;
   color: $primary-color;
   line-height: 1.36;
   font-size: 11px;
+  transition: color 250ms $cubic;
 }
 

@@ -36,4 +36,6 @@
 .about__btn {
   @extend %btn-light;
   color: $primary-color;
+  transition: background-color 250ms $cubic,
+              color 250ms $cubic;
 }

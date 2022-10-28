@@ -18,4 +18,5 @@
   @extend %link;
   display: block;
   padding: 52px 0;
+  transition: color 250ms $cubic;
 }

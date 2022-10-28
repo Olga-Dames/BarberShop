@@ -1,6 +1,32 @@
 .services {
 background-color: $dark-bg-color;
+background-image: url(../images/mobile/mobile-services-bg.png);
+background-size: cover;
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/mobile/mobile-services-bg@2x.png);
+  }
+
+@media screen and (min-width:$tablet) {
+  background-image: url(../images/Tablet/tablet-services-bg.png);
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  background-image: url(../images/Tablet/tablet-services-bg@2x.png);
+  }
+}
+@media screen and (min-width:$desktop) {
+  background-image: url(../images/desktop/desktop-services-bg.png);
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/desktop/desktop-services-bg@2x.png);
+  }
+}
 &__title {
   @extend %title, %title-light;
 }
@@ -15,6 +41,7 @@ background-color: $dark-bg-color;
   width: 100%;
 }
 }
+
 .services__price-list {
   @extend %list;
   flex-basis: 570px;
@@ -39,15 +66,22 @@ background-color: $dark-bg-color;
   }
 }
 
-.services__price-line {
+.services__price-item::before {
+  content: "";
+  display: inline-block;
   height: 1px;
-  flex-grow:1;
+  flex-grow: 1;
   margin: 0 12px;
   background-color: rgba(157, 164, 189, 0.12);
+}
+.services__price-descr {
+  order: -1;
 }
 .services__btn {
   @extend %btn;
   display: block;
   margin: 0 auto;
   margin-top: 44px;
+  transition: background-color 250ms $cubic,
+              color 250ms $cubic;
 }

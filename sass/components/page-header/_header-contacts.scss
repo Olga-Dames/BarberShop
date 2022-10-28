@@ -1,12 +1,15 @@
 .header__contacts {
 margin-left: auto;
+margin-right: 20px;
 }
 
 .header__contacts-tel {
   @extend %link;
   margin-right: 40px;
+  transition: color 250ms ease;
 }
 
 .header__contacts-btn {
   @extend %btn;
+  transition: background-color 250ms $cubic;
 }

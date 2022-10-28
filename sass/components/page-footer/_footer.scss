@@ -2,7 +2,7 @@
   padding: 56px 0;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 .footer__copyright {
   font-weight: 600;
@@ -13,9 +13,20 @@
 .footer__list {
   @extend %list;
   display: flex;
+  align-items: center;
   gap: 40px;
+
+&::before {
+    content: "";
+    display: inline-block;
+    margin-right: 20px;
+    height: 1px;
+    width: 60px;
+    background-color: $primary-color;
+  }
 }
 .footer__social-link {
   @extend %link;
   color: $primary-color;
+  transition: color 250ms $cubic;
 }

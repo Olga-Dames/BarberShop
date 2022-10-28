@@ -8,9 +8,18 @@
   $form-color: rgba(157, 164, 189, 0.4);
 
   $dark-bg-color: #191C26;
+  $dark-bg-transparent: rgba(25, 28, 38, 0.2);
+  $section-bg-dark:#111319;
+  $light-bg-color: #FFF;
   $secondary-bg-color: #F7F7F7;
 
   $primary-font: 'Open Sans', sans-serif;
   $secondary-font: 'Raleway', sans-serif;
 
   $border-radius: 25px;
+
+  $mobile: 480px;
+  $tablet: 768px;
+  $desktop: 1200px;
+
+  $cubic: cubic-bezier(.35, .04, .55, .45);

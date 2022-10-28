@@ -65,16 +65,33 @@
 }
 
 %title {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
   color: $primary-color;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-right: 20px;
+    height: 1px;
+    width: 60px;
+    background-color: $primary-color;
+
+  }
 }
 
 %title-light {
   color: $heading-color;
+
+&::before {
+    content: "";
+    background-color: $heading-color;
+}
 }
 %heading {
   margin-bottom: 44px;

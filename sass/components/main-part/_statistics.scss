@@ -11,7 +11,6 @@
 
   &__wrapper {
     display: flex;
-    gap: 130px;
   }
 
   &__item {
@@ -25,18 +24,19 @@
 .stats__list {
   @extend %list;
   display: flex;
+  flex-direction: column;
   gap: 30px;
-  margin-left: 100px;
+
+  &--last {
+      justify-content: flex-end;
+    }
 }
 .stats__list-wrapper {
   height: 321px;
   display: flex;
-  flex-direction: column;
   gap: 30px;
-  
-&--last {
-    justify-content: flex-end;
-  }
+  margin-left: 100px;
+  margin-right: 130px;
 }
 
 .stats__number {
