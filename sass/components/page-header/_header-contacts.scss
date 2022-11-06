@@ -37,9 +37,10 @@
 .header__contacts-btn {
   @extend %btn-light;
   min-width: 194px;
-  transition: background-color 250ms $cubic;
+  transition: background-color 250ms $cubic,
+              transform 250ms $cubic;
 
-@media screen and (min-width:$tablet) {
+  @media screen and (min-width:$tablet) {
   color: $light-text-color;
   min-width: 160px;
   }

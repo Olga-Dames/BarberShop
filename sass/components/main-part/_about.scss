@@ -80,5 +80,6 @@
   @extend %btn-light;
   color: $primary-color;
   transition: background-color 250ms $cubic,
-              color 250ms $cubic;
+              color 250ms $cubic,
+              transform 250ms $cubic;;
 }

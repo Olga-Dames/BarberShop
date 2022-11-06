@@ -12,16 +12,16 @@
     }
   }
 
-  &__wrapper {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-        display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 40px 31px 0 31px;
-          z-index: 999;
+&__wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 31px 0 31px;
+  z-index: 999;
 
 &.no-transparency {
     background-color: rgba(25, 28, 38, 0.5);
@@ -30,7 +30,7 @@
 & >.header__logo-link {
     color: $light-text-color;
   }
-  }
+}
 
 @media screen and (min-width: $tablet) {
   width: 768px;

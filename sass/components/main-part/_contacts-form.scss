@@ -144,7 +144,8 @@ background-position: top calc(50% + 290px) center;
   @extend %btn;
   display: block;
   margin: 0 auto;
-  transition: background-color 250ms $cubic;
+  transition: background-color 250ms $cubic,
+              transform 250ms $cubic;
 
 @media screen and (min-width:$tablet) {
 margin-left: 0;
