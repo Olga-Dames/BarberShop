@@ -1,10 +1,9 @@
 .contacts {
-padding-top: 130px;
 background-color: $dark-bg-color;
 background-image: url(../../../images/mobile/mobile-footer-bg.png);
 background-repeat: no-repeat;
-background-size: 50% 100%;
-background-position: 100%;
+background-size: contain;
+background-position: top calc(50% + 290px) center;
 
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
@@ -12,20 +11,23 @@ background-position: 100%;
     background-image: url(../images/mobile/mobile-footer-bg@2x.png);
   }
 
-  @media screen and (min-width:$tablet) {
+@media screen and (min-width:$tablet) {
     background-image: url(../images/Tablet/tablet-footer-bg.png);
+    background-position: top calc(50% + 270px) center;
 
-    @media (min-device-pixel-ratio: 2),
+@media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
       background-image: url(../images/Tablet/tablet-footer-bg@2x.png);
     }
   }
 
-  @media screen and (min-width:$desktop) {
+@media screen and (min-width:$desktop) {
+    padding-top: 130px;
     background-image: url(../images/desktop/desktop-footer-bg.png);
+    background-position: left calc(50% + 407px) center;
 
-    @media (min-device-pixel-ratio: 2),
+@media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
       background-image: url(../images/desktop/desktop-footer-bg@2x.png);
@@ -33,22 +35,53 @@ background-position: 100%;
   }
 &__wrapper {
   display: flex;
+  flex-direction: column;
+
+@media screen and (min-width:$desktop) {
+    flex-direction: row;
+    gap: 30px;
+  }
 }
 &__booking-heading {
   @extend %heading, %heading-light;
+  text-align: center;
+
+@media screen and (min-width:$tablet) {
+  text-align: left;
+}
 }
 }
 .contacts__booking {
-  padding-right: 30px;
+  padding-bottom: 84px;
+
+@media screen and (min-width:$tablet) {
+  padding-bottom: 100px;
+}
+
+@media screen and (min-width:$desktop) {
+  padding-bottom: 0;
+  flex-basis: 570px;
+}
 } 
+
+.contacts__label {
+  width: 100%;
+}
+
 .contacts__input-wrapper {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 44px;
   margin-bottom: 44px;
+
+@media screen and (min-width:$tablet) {
+  flex-direction: row;
+  gap: 30px;
+}
 }
 .contacts__input {
   display: block;
-  width: 270px;
+  width: 100%;
   padding-bottom: 8px;
   background-color: transparent;
   color: $light-text-color;
@@ -61,6 +94,7 @@ background-position: 100%;
     outline: none;
     border-bottom: 1px solid $light-text-color;
   }
+
 &::placeholder {
   font-weight: 600;
   font-size: 11px;
@@ -71,10 +105,12 @@ background-position: 100%;
   transition: color 250ms $cubic,
               border-bottom 250ms $cubic;
 }
+
 &:focus::placeholder {
   color: $light-text-color;
 }
 }
+
 .contacts__textarea {
   width: 100%;
   height: 76px;
@@ -107,58 +143,10 @@ background-position: 100%;
 .contacts__button {
   @extend %btn;
   display: block;
+  margin: 0 auto;
   transition: background-color 250ms $cubic;
-}
-.address {
-  padding-left: 100px;
-&__heading {
-  @extend %heading, %heading-light;
-  margin-bottom: 40px;
-}
-}
-.address__list {
-  @extend %list;
-  margin-bottom: 70px;
 
-&--map {
-  display: flex;
-  align-items: start;
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 700;
-  color: $secondary-color;
+@media screen and (min-width:$tablet) {
+margin-left: 0;
 }
-&--tel {
-  display: flex;
-  align-items: center;
-  font-style: normal;
-  text-decoration: none;
-  color: $secondary-color;
-}
-&--mail {
-  display: flex;
-  align-items: center;
-  font-style: normal;
-  text-decoration-line: underline;
-  color: $secondary-color;
-}
-}
-.address__icon {
-  margin-right: 16px;
-}
-.address__list-item:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-.schedule__title {
-  @extend %title;
-  margin-bottom: 20px;
-  color: $light-text-color;
-
-  &::before {
-    background-color: rgba(157, 164, 189, 0.4);
-  }
-}
-.schedule__time {
-    color: #9DA4BD;
 }

@@ -24,13 +24,43 @@ img {
 }
 
 .container {
-  position: relative;
-  width: 1200px;
-  padding: 0 15px;
+  padding: 0 31px;
   margin: 0 auto;
 }
 
-.section {
-  padding: 120px 0;
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    }
+  }
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 39px;
+    }
+  }
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding: 0 15px;
+  }
 }
 
+.section {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 84px 0;
+}
+
+@media screen and (min-width: $tablet) {
+  .section {
+    padding: 100px 0;
+  }
+}
+@media screen and (min-width: $desktop) {
+  .section {
+    padding: 120px 0;
+  }
+}

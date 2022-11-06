@@ -1,8 +1,17 @@
+.header__logo-link {
+  color: $light-text-color;
 
+@media screen and (min-width: $tablet) {
+  padding-left: 11px;
+  color: $primary-color;
+  }
 
+@media screen and (min-width: $desktop) {
+  padding-left: 0;
+}
+}
 .header__logo-img {
   width: 69px;
   height: 56px;
-  margin-right: 130px;
-
+  fill: currentColor;
 }

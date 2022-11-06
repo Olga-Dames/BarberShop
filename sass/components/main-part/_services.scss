@@ -21,51 +21,92 @@ background-size: cover;
 @media screen and (min-width:$desktop) {
   background-image: url(../images/desktop/desktop-services-bg.png);
 
-  @media (min-device-pixel-ratio: 2),
+@media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
     background-image: url(../images/desktop/desktop-services-bg@2x.png);
   }
 }
+
 &__title {
   @extend %title, %title-light;
 }
 
 &__heading {
   @extend %heading, %heading-light;
+  font-size: 40px;
+  line-height: 1.18; 
+
+@media screen and (min-width:$tablet) {
+  font-size: 42px;
+  line-height: 1.17;
+}
 }
 
 &__wrapper {
-  display: flex;
-  gap: 30px;
+  padding: 30px 20px 30px 40px;
   width: 100%;
+  background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+
+@media screen and (min-width:$tablet) {
+  padding: 32px 40px;
+    }
+  
+@media screen and (min-width:$desktop) {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0;
+  background-image: none;
+  }
 }
 }
 
 .services__price-list {
   @extend %list;
-  flex-basis: 570px;
-  padding: 30px 20px;
+  @media screen and (min-width:$desktop) {
+    flex-basis: 570px;
+    padding: 30px 20px;
+  }
+}
 
-&--first {
-  background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
-}
-&--second {
-  background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-}
 .services__price-item {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  font-size: 14px;
+  line-height: 1.43;
   color: $secondary-color;
-
-  &:not(:last-child) {
+  
+&:not(:last-child) {
   margin-bottom: 20px;
-  }
 }
 
+@media screen and (min-width:$tablet) {
+  font-size: 18px;
+  line-height: 1.67;
+  }
+}
+.services__price-list--first {
+  margin-bottom: 20px;
+
+@media screen and (min-width:$desktop) {
+  margin-bottom: 0;
+  background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+}
+.services__price-list--second {
+
+  &:nth-child(8) {
+    margin-bottom: 0;
+  }
+
+@media screen and (min-width:$desktop) {
+  background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+  
 .services__price-item::before {
   content: "";
   display: inline-block;

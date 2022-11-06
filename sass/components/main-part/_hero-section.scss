@@ -1,54 +1,86 @@
 .hero {
-  &__container {
-    position: relative;
-  }
-  &__wrapper {
-    position: absolute;
-    left: 200px;
-    top: 270px;
-    z-index: 10;
-  }
-  
-  &__title {
-    @extend %title;
-    @extend %title-light;
-  }
-  &__heading {
-    @extend %heading;
-    @extend %heading-light;
-    margin-bottom: 20px;
-    font-size: 72px;
-    line-height: 1.18;
-  }
-  &__descr {
-    color: $secondary-color;
-  }
-}
+  padding: 0;
 
-.hero__social-list {
-  @extend %list;
-  position: absolute;
-  left: -85px;
-  bottom: 160px;
+  &__left-side {
+@media screen and (max-width:767px) {
+        display: none;
+      }
+@media screen and (min-width:$desktop) {    
+    }
+  }
+
+&__container {
+  position: relative;
   display: flex;
-  align-items: center;
-  gap: 40px;
-  transform: rotate(-90deg);
+  gap: 30px;
 
-&::before {
-      content: "";
-      display: inline-block;
-      margin-right: 20px;
-      height: 1px;
-      width: 60px;
-      background-color: $primary-color;
+@media screen and (max-width:767px) {
+  padding: 0;
+  }
+@media screen and (min-width:$desktop) {
+  gap: 0;
 }
+  }
+
+
+&__wrapper {
+  position: absolute;
+  bottom: calc(50% - 100px);
+  left: 31px;
+  z-index: 1;
+  
+@media screen and (min-width:$tablet) {
+  bottom: 237px;
+  left: 240px;
+  }
+
+@media screen and (min-width:$desktop) {
+  bottom: 200px;
+  left: 200px;
+  }
 }
-.hero__social-link {
-  @extend %link;
-  color: $primary-color;
-  line-height: 1.36;
-  font-size: 11px;
-  transition: color 250ms $cubic;
+  
+&__title {
+  @extend %title;
+  @extend %title-light;
+  }
+
+&__heading {
+  @extend %heading;
+  @extend %heading-light;
+  margin-bottom: 20px;
+  font-size: 48px;
+  line-height: 1.17;
+
+@media screen and (min-width:$desktop) {
+  font-size: 72px;
+  line-height: 1.18;
+  }
 }
 
+&__descr {
+  font-size: 16px;
+  line-height: 1.62;
+  color: $secondary-color;
+
+@media screen and (min-width: $tablet) {
+  font-size: 18px;
+  line-height: 1.67;
+  }
+}
+}
+
+.hero__right-side {
+@media screen and (min-width:$desktop) {
+  flex-grow: 1;
+  }
+}
+
+.hero__left-side {
+@media  screen and (min-width:$tablet) {
+  width: 90px;
+  }
+@media screen and (min-width:$desktop) {
+  width: 100px;
+  }
+}

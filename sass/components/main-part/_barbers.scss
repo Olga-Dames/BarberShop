@@ -8,13 +8,29 @@
   @extend %heading;
   }
 }
-
+.barbers__box {
+@media screen and(min-width:$tablet) {
+  padding: 0 120px;
+  }
+@media screen and(min-width:$desktop) {
+  padding: 0;
+  }
+}
 .barbers__list {
   @extend %list;
 display: flex;
 flex-wrap: wrap;
-gap: 30px;
+gap: 64px;
+
+@media screen and(min-width: $tablet) {
+  justify-content: center;
 }
+
+@media screen and(min-width: $desktop) {
+  gap: 30px;
+}
+}
+
 .barbers__textbox {
   padding: 30px;
   padding-bottom: 0;

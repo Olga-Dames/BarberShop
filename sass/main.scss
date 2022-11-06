@@ -6,7 +6,10 @@
 @import './components/page-header/header-logo';
 @import './components/page-header/header-nav';
 @import './components/page-header/header-contacts';
+@import './components/page-header/header-social-link';
+@import './components/page-header/mobile-menu';
 @import './components/main-part/hero-section';
+@import './components/main-part/hero-social-link';
 @import './components/main-part/slider';
 @import './components/main-part/about';
 @import './components/main-part/services';
@@ -14,5 +17,6 @@
 @import './components/main-part/barbers';
 @import './components/main-part/social';
 @import './components/main-part/gallery';
-@import './components/main-part/contacts';
+@import './components/main-part/contacts-form';
+@import './components/main-part/address';
 @import './components/page-footer/footer';

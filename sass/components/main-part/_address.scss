@@ -1,0 +1,100 @@
+.address {
+  padding-top: 84px;
+
+@media screen and (min-width:$tablet) {
+  padding-top: 100px;
+  }
+
+@media screen and (min-width:$desktop) {
+  padding-top: 0;
+  padding-left: 100px;
+}
+
+@media screen and (min-width:$tablet) {
+  &__wrapper {
+    display: flex;
+    gap: 100px;
+    }
+  }
+
+@media screen and (min-width:$desktop) {
+  &__wrapper {
+    display: block;
+    }
+  }
+&__heading {
+  @extend %heading, %heading-light;
+  text-align: center;
+  margin-bottom: 40px;
+
+@media screen and (min-width:$tablet) {
+  text-align: left;
+  }
+  }
+}
+
+.address__list {
+  @extend %list;
+  font-style: normal;
+  margin-bottom: 44px;
+
+@media screen and (min-width:$tablet) {
+  margin-bottom: 0;
+  }
+
+@media screen and (min-width:$desktop) {
+  margin-bottom: 70px;
+}
+}
+
+.address__list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.address__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $secondary-color;
+
+&--map {
+    font-weight: 700;
+
+@media screen and (max-width:767px) {
+  br {
+    display: none;
+    }
+  }
+}
+
+&--mail {
+  text-decoration-line: underline;
+  }
+}
+
+.address__icon {
+  margin-right: 16px;
+&--map {
+  margin-top: 6px;
+  align-self: baseline;
+  }
+}
+
+@media screen and (min-width:$desktop) {
+  .address__link--map {
+    align-self: baseline;}
+}
+
+.schedule__title {
+  @extend %title;
+  margin-bottom: 20px;
+  color: $light-text-color;
+
+  &::before {
+    background-color: rgba(157, 164, 189, 0.4);
+  }
+}
+
+.schedule__time {
+  color: #9DA4BD;
+}
