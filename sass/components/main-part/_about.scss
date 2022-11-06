@@ -6,32 +6,75 @@
 .about__list {
   @extend %list;
   display: flex;
+  flex-direction: column;
   gap: 30px;
 
-&-item {
-  width: 270px;
-}
-}
+@media screen and (max-width:767px) {
+  display: none;
+  }
 
+@media screen and (min-width:$desktop) {
+  flex-direction: row;
+  }
+
+&-item {
+  width: 330px;
+
+@media screen and (min-width:$desktop) {
+  width: 270px;
+  }
+}
+}
 .about__textbox {
   width: 470px;
+
 &-title {
   @extend %title;
   }
+
 &-heading {
   @extend %heading;
+  max-width: 306px;
+  font-size: 28px;
+  line-height: 1.18;
   margin-bottom: 20px;
+
+@media screen and (min-width:$desktop) {
+  font-size: 42px;
+  max-width: 500px;
+    line-height: 1.17;
+  }
 }
 &-descr {
+  font-size: 16px;
+  line-height: 1.62;
   color: $paragraph-color;
   margin-bottom: 20px;
+
+@media screen and (min-width:$tablet) {
+  font-size: 18px;
+  line-height: 1.67;
+}
 }
 &-paragraph {
   font-size: 14px;
   line-height: 1.86;
   color: $paragraph-color;
+  margin-bottom: 40px;
+
+@media screen and (min-width:$tablet) {
+    margin-bottom: 77px;;
+  }
+
+@media screen and (min-width:$desktop) {
   margin-bottom: 42px;
 }
+}
+}
+.about__extra-text {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 .about__btn {
   @extend %btn-light;
