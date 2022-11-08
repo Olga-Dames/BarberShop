@@ -14,12 +14,12 @@
   border: 1px solid $accent-color;
   border-radius: $border-radius;
   cursor: pointer;
-  transform: scale(1);
+
 
 &:hover,
 &:focus {
     background-color: $accent-color;
-        transform: scale(1.2);
+    animation: shake-horizontal .8s $cubic both;
   }
 }
 
@@ -39,13 +39,12 @@
   border: 1px solid $accent-color;
   border-radius: $border-radius;
   cursor: pointer;
-  transform: scale(1);
 
   &:hover,
   &:focus {
     background-color: $accent-color;
     color: $light-text-color;
-    transform: scale(1.2);
+    animation: shake-horizontal .8s $cubic both;
   }
 }
 

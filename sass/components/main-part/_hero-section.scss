@@ -43,6 +43,10 @@
 &__title {
   @extend %title;
   @extend %title-light;
+
+@media screen and (min-width:$tablet) {
+    animation: scroll-to-bottom 400ms ease-in 200ms both;
+    }
   }
 
 &__heading {
@@ -52,6 +56,9 @@
   font-size: 48px;
   line-height: 1.17;
 
+  @media screen and (min-width:$tablet) {
+    animation: scroll-to-right 600ms ease-in 400ms both;
+    }
 @media screen and (min-width:$desktop) {
   font-size: 72px;
   line-height: 1.18;
@@ -66,6 +73,7 @@
 @media screen and (min-width: $tablet) {
   font-size: 18px;
   line-height: 1.67;
+  animation: scroll-to-top 400ms ease-in 400ms both;
   }
 }
 }
@@ -79,6 +87,8 @@
 .hero__left-side {
 @media  screen and (min-width:$tablet) {
   width: 90px;
+  display: flex;
+  align-items: flex-end;
   }
 @media screen and (min-width:$desktop) {
   width: 100px;

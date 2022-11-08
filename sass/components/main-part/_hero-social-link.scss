@@ -1,22 +1,20 @@
 .hero__social-list {
   @extend %list;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateY(26px);
+  transform-origin: top left;
   gap: 24px;
-  position: relative;
-  top: 60%;
+  margin-bottom: 40px;
 }
 
 .hero__social-item {
   display: flex;
   align-items: center;
+  gap: 40px;
 
 &::before {
   content: "";
   display: inline-block;
-  margin-right: 40px;
   height: 1px;
   width: 60px;
   background-color: $primary-color;

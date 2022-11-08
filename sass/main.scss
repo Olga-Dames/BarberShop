@@ -2,6 +2,7 @@
 @import './utils/global';
 @import './utils/placeholders';
 @import './utils/utilities';
+@import './utils/keyframes';
 @import './components/page-header/page-header';
 @import './components/page-header/header-logo';
 @import './components/page-header/header-nav';
@@ -10,6 +11,7 @@
 @import './components/page-header/mobile-menu';
 @import './components/main-part/hero-section';
 @import './components/main-part/hero-social-link';
+@import './components/main-part/modal';
 @import './components/main-part/slider';
 @import './components/main-part/about';
 @import './components/main-part/services';

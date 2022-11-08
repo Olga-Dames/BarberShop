@@ -87,7 +87,11 @@
                     <a class="header__contacts-tel" href="tel:+380441111111"
                       >+38 044 111 11 11</a
                     >
-                    <button class="header__contacts-btn" type="button">
+                    <button
+                      class="header__contacts-btn"
+                      type="button"
+                      data-modal-open
+                    >
                       Online-booking
                     </button>
                   </div>
@@ -382,6 +386,7 @@
                   media="(min-width:768px)"
                 />
                 <img
+                  class="about__list-img"
                   src="./images/desktop/desktop-about1.jpg"
                   alt="beard is being shaved"
                 />
@@ -420,6 +425,7 @@
                   media="(min-width:768px)"
                 />
                 <img
+                  class="about__list-img"
                   src="./images/desktop/desktop-about2.jpg"
                   alt="haircut with blade"
                 />
@@ -552,58 +558,68 @@
             <h3 class="barbers__heading">Our barbers</h3>
           </div>
           <ul class="barbers__list">
-            <li>
-              <picture>
-                <source
-                  srcset="
-                    ./images/desktop/desktop-barber1.webp    1x,
-                    ./images/desktop/desktop-barber1@2x.webp 2x
-                  "
-                  media="(min-width:1200px)"
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/desktop/desktop-barber1.jpg    1x,
-                    ./images/desktop/desktop-barber1@2x.jpg 2x
-                  "
-                  media="(min-width:1200px)"
-                />
-                <source
-                  srcset="
-                    ./images/tablet/tablet-barber1.webp    1x,
-                    ./images/tablet/tablet-barber1@2x.webp 2x
-                  "
-                  media="(min-width:768px)"
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/tablet/tablet-barber1.jpg    1x,
-                    ./images/tablet/tablet-barber1@2x.jpg 2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    ./images/mobile/mobile-barber1.webp    1x,
-                    ./images/mobile/mobile-barber1@2x.webp 2x
-                  "
-                  media="(min-width:480px)"
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/mobile/mobile-barber1.jpg    1x,
-                    ./images/mobile/mobile-barber1@2x.jpg 2x
-                  "
-                  media="(min-width:480px)"
-                />
-                <img
-                  src="./images/mobile/mobile-barber1.jpg"
-                  alt="Extreme Barber John Smith"
-                />
-              </picture>
+            <li class="barbers__item">
+              <div class="barbers__thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop/desktop-barber1.webp    1x,
+                      ./images/desktop/desktop-barber1@2x.webp 2x
+                    "
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/desktop-barber1.jpg    1x,
+                      ./images/desktop/desktop-barber1@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/tablet-barber1.webp    1x,
+                      ./images/tablet/tablet-barber1@2x.webp 2x
+                    "
+                    media="(min-width:768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/tablet-barber1.jpg    1x,
+                      ./images/tablet/tablet-barber1@2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/mobile-barber1.webp    1x,
+                      ./images/mobile/mobile-barber1@2x.webp 2x
+                    "
+                    media="(min-width:480px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/mobile-barber1.jpg    1x,
+                      ./images/mobile/mobile-barber1@2x.jpg 2x
+                    "
+                    media="(min-width:480px)"
+                  />
+                  <img
+                    src="./images/mobile/mobile-barber1.jpg"
+                    alt="Extreme Barber John Smith"
+                  />
+                </picture>
+                <div class="barbers__overlay">
+                  <p class="barbers__overlay-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Cumque dolore porro culpa ipsum itaque neque nesciunt
+                    tempore dolores, expedita sint pariatur recusandae numquam
+                    asperiores! Architecto quod vel error natus pariatur.
+                  </p>
+                </div>
+              </div>
               <div class="barbers__textbox">
                 <h4 class="barbers__name">John Smith</h4>
                 <p class="barbers__position">Extreme Barber</p>
@@ -645,58 +661,68 @@
                 </ul>
               </div>
             </li>
-            <li>
-              <picture>
-                <source
-                  srcset="
-                    ./images/desktop/desktop-barber2.webp    1x,
-                    ./images/desktop/desktop-barber2@2x.webp 2x
-                  "
-                  media="(min-width:1200px)"
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/desktop/desktop-barber2.jpg    1x,
-                    ./images/desktop/desktop-barber2@2x.jpg 2x
-                  "
-                  media="(min-width:1200px)"
-                />
-                <source
-                  srcset="
-                    ./images/tablet/tablet-barber2.webp    1x,
-                    ./images/tablet/tablet-barber2@2x.webp 2x
-                  "
-                  media="(min-width:768px)"
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/tablet/tablet-barber2.jpg    1x,
-                    ./images/tablet/tablet-barber2@2x.jpg 2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    ./images/mobile/mobile-barber2.webp    1x,
-                    ./images/mobile/mobile-barber2@2x.webp 2x
-                  "
-                  media="(min-width:480px)"
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/mobile/mobile-barber2.jpg    1x,
-                    ./images/mobile/mobile-barber2@2x.jpg 2x
-                  "
-                  media="(min-width:480px)"
-                />
-                <img
-                  src="./images/mobile/mobile-barber2.jpg"
-                  alt="Extreme Barber Michele Doe"
-                />
-              </picture>
+            <li class="barbers__item">
+              <div class="barbers__thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop/desktop-barber2.webp    1x,
+                      ./images/desktop/desktop-barber2@2x.webp 2x
+                    "
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/desktop-barber2.jpg    1x,
+                      ./images/desktop/desktop-barber2@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/tablet-barber2.webp    1x,
+                      ./images/tablet/tablet-barber2@2x.webp 2x
+                    "
+                    media="(min-width:768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/tablet-barber2.jpg    1x,
+                      ./images/tablet/tablet-barber2@2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/mobile-barber2.webp    1x,
+                      ./images/mobile/mobile-barber2@2x.webp 2x
+                    "
+                    media="(min-width:480px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/mobile-barber2.jpg    1x,
+                      ./images/mobile/mobile-barber2@2x.jpg 2x
+                    "
+                    media="(min-width:480px)"
+                  />
+                  <img
+                    src="./images/mobile/mobile-barber2.jpg"
+                    alt="Extreme Barber Michele Doe"
+                  />
+                </picture>
+                <div class="barbers__overlay">
+                  <p class="barbers__overlay-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Cumque dolore porro culpa ipsum itaque neque nesciunt
+                    tempore dolores, expedita sint pariatur recusandae numquam
+                    asperiores! Architecto quod vel error natus pariatur.
+                  </p>
+                </div>
+              </div>
               <div class="barbers__textbox">
                 <h4 class="barbers__name">Michele Doe</h4>
                 <p class="barbers__position">Extreme Barber</p>
@@ -738,58 +764,68 @@
                 </ul>
               </div>
             </li>
-            <li>
-              <picture>
-                <source
-                  srcset="
-                    ./images/desktop/desktop-barber3.webp    1x,
-                    ./images/desktop/desktop-barber3@2x.webp 2x
-                  "
-                  media="(min-width:1200px)"
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/desktop/desktop-barber3.jpg    1x,
-                    ./images/desktop/desktop-barber3@2x.jpg 2x
-                  "
-                  media="(min-width:1200px)"
-                />
-                <source
-                  srcset="
-                    ./images/tablet/tablet-barber3.webp    1x,
-                    ./images/tablet/tablet-barber3@2x.webp 2x
-                  "
-                  media="(min-width:768px)"
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/tablet/tablet-barber3.jpg    1x,
-                    ./images/tablet/tablet-barber3@2x.jpg 2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    ./images/mobile/mobile-barber3.webp    1x,
-                    ./images/mobile/mobile-barber3@2x.webp 2x
-                  "
-                  media="(min-width:480px)"
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/mobile/mobile-barber3.jpg    1x,
-                    ./images/mobile/mobile-barber3@2x.jpg 2x
-                  "
-                  media="(min-width:480px)"
-                />
-                <img
-                  src="./images/mobile/mobile-barber3.jpg"
-                  alt="Extreme Barber Alan Black"
-                />
-              </picture>
+            <li class="barbers__item">
+              <div class="barbers__thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop/desktop-barber3.webp    1x,
+                      ./images/desktop/desktop-barber3@2x.webp 2x
+                    "
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/desktop-barber3.jpg    1x,
+                      ./images/desktop/desktop-barber3@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/tablet-barber3.webp    1x,
+                      ./images/tablet/tablet-barber3@2x.webp 2x
+                    "
+                    media="(min-width:768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/tablet-barber3.jpg    1x,
+                      ./images/tablet/tablet-barber3@2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/mobile-barber3.webp    1x,
+                      ./images/mobile/mobile-barber3@2x.webp 2x
+                    "
+                    media="(min-width:480px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/mobile-barber3.jpg    1x,
+                      ./images/mobile/mobile-barber3@2x.jpg 2x
+                    "
+                    media="(min-width:480px)"
+                  />
+                  <img
+                    src="./images/mobile/mobile-barber3.jpg"
+                    alt="Extreme Barber Alan Black"
+                  />
+                </picture>
+                <div class="barbers__overlay">
+                  <p class="barbers__overlay-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Cumque dolore porro culpa ipsum itaque neque nesciunt
+                    tempore dolores, expedita sint pariatur recusandae numquam
+                    asperiores! Architecto quod vel error natus pariatur.
+                  </p>
+                </div>
+              </div>
               <div class="barbers__textbox">
                 <h4 class="barbers__name">Alan Black</h4>
                 <p class="barbers__position">Extreme Barber</p>
@@ -886,6 +922,7 @@
                   media="(min-width:480px)"
                 />
                 <img
+                  class="gallery__img"
                   src="./images/mobile/mobile-gallery1.jpg"
                   alt="barber is trimming hair"
                 />
@@ -939,6 +976,7 @@
                   media="(min-width:480px)"
                 />
                 <img
+                  class="gallery__img"
                   src="./images/mobile/mobile-gallery2.jpg"
                   alt="barber is shaving a man"
                 />
@@ -992,6 +1030,7 @@
                   media="(min-width:480px)"
                 />
                 <img
+                  class="gallery__img"
                   src="./images/mobile/mobile-gallery3.jpg"
                   alt="barber put hot towel on face"
                 />
@@ -1045,6 +1084,7 @@
                   media="(min-width:480px)"
                 />
                 <img
+                  class="gallery__img"
                   src="./images/mobile/mobile-gallery4.jpg"
                   alt="barber is using sharp blade"
                 />
@@ -1156,6 +1196,15 @@
           </div>
         </div>
       </section>
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="modal__button" type="button" data-modal-close>
+            <svg class="modal__icon" width="40" height="40">
+              <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="container">
@@ -1186,6 +1235,7 @@
     </footer>
 
     <script src="./js/header-scroll.js"></script>
+    <script src="./js/modal.js"></script>
     <script defer src="/js/mobile-menu.js"></script>
     <script src="/js/slider.min.js" defer></script>
   </body>

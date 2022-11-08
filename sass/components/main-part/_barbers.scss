@@ -30,11 +30,48 @@ gap: 64px;
   gap: 30px;
 }
 }
+.barbers__item {
+  
+@media screen and(min-width: $desktop) {
+  flex-basis: calc((100% - 30px * 2) / 3);
+  }
+
+&:focus .barbers__overlay,
+&:hover .barbers__overlay {
+  transform: translateY(0);
+}
+}
+
+.barbers__thumb {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.barbers__overlay {
+position: absolute;
+top: 0;
+left: 0;
+display: flex;
+align-items: center;
+width: 100%;
+height: 100%;
+padding: 0 15px;
+backdrop-filter: blur(2px);
+transform: translateY(101%);
+transition: transform 250ms $cubic;
+
+&-text {
+  text-align: center;
+  color: $light-text-color;
+}
+}
 
 .barbers__textbox {
   padding: 30px;
   padding-bottom: 0;
 }
+
 .barbers__name {
   margin-bottom: 8px;
   font-weight: 400;

@@ -3,43 +3,6 @@
   display: flex;
   gap: 30px;
 }
-.about__wrapper::after {
-  content:'';
-  position:absolute;
-  top: -80px;
-  left: 20px;
-  display: block;
-  width: 40px;
-  height: 40px;
-  border-radius: 5px;
-  background-color: $primary-color;
-  animation-name: rolling;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes rolling {
-  0% {
-    background-color: $accent-color;
-    transform: translateX(0%);
-  }
-  25% {
-    background-color: $primary-color;
-  }
-
-  50% {
-    background-color: $accent-color;
-    transform: translateX(1170px);
-  }
-  75% {
-    background-color: $primary-color;
-    }
-  100% {
-    background-color: $accent-color;
-    transform: translateX(0);
-  }
-}
 
 .about__list {
   @extend %list;
@@ -57,12 +20,23 @@
 
 &-item {
   width: 330px;
+  overflow: hidden;
 
 @media screen and (min-width:$desktop) {
   width: 270px;
   }
 }
+
+&-img {
+  transition: transform 700ms $cubic;
 }
+
+&-item:hover &-img,
+&-item:focus &-img {
+  transform: scale(1.2);
+}
+}
+
 .about__textbox {
   width: 470px;
 
