@@ -64,10 +64,6 @@ background-position: top calc(50% + 290px) center;
 }
 } 
 
-.contacts__label {
-  width: 100%;
-}
-
 .contacts__input-wrapper {
   display: flex;
   flex-direction: column;
@@ -79,39 +75,60 @@ background-position: top calc(50% + 290px) center;
   gap: 30px;
 }
 }
-.contacts__input {
+.contacts__field {
+  position: relative;
   display: block;
   width: 100%;
-  padding-bottom: 8px;
+}
+.contacts__input {
+  width: 100%;
+  height: 24px;
   background-color: transparent;
   color: $light-text-color;
   border: none;
   border-bottom: 1px solid $form-color;
   cursor: pointer;
-  transition: border-bottom 250ms $cubic;
+  transition: 250ms $cubic;
 
 &:focus {
-    outline: none;
-    border-bottom: 1px solid $light-text-color;
+  outline: transparent;
+  border-bottom: 1px solid $light-text-color;
   }
+
+&:focus + .contacts__label,
+&:not(:placeholder-shown) + .contacts__label{
+  color: $light-text-color;
+  transform: translateY(-12px) scale(0.8);
+}
 
 &::placeholder {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
+  color: $form-color;
+  opacity: 0;
+  transition: opacity 250ms $cubic;
+}
+&:focus::placeholder {
+  opacity: 1;
+}
+}
+
+.contacts__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $form-color;
-  transition: color 250ms $cubic,
-              border-bottom 250ms $cubic;
+  transition: transform 250ms $cubic
 }
-
-&:focus::placeholder {
-  color: $light-text-color;
-}
-}
-
 .contacts__textarea {
+  position: relative;
   width: 100%;
   height: 76px;
   margin-bottom: 44px;
@@ -128,18 +145,24 @@ background-position: top calc(50% + 290px) center;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: $form-color;
-  transition: color 250ms $cubic;
+  opacity: 0;
+  transition: opacity 250ms $cubic;
 }
 &:focus {
-  outline: none;
+  outline: transparent;
   border-bottom: 1px solid $light-text-color;
 }
-&:focus::placeholder {
+&:focus+.contacts__label,
+&:not(:placeholder-shown)+.contacts__label {
   color: $light-text-color;
+  transform: translateY(-12px) scale(0.8);
 }
+&:focus::placeholder {
+  opacity: 1;
+  }
 }
+
 .contacts__button {
   @extend %btn;
   display: block;

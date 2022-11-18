@@ -1,0 +1,222 @@
+.form {
+  &__title {
+    @extend %heading;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+.form__field {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+  color: $primary-color;
+  transition: color 250ms $cubic;
+
+&:focus-within {
+  color: $accent-color;
+  }
+}
+
+.form__input {
+  width: 100%;
+  height: 30px;
+  padding-left: 5px;
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+  transition: border 250ms $cubic;
+
+&:focus {
+  border: 1px solid $accent-color;
+  outline: none;
+}
+}
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+  transform: translateX(35px) scale(0.8);
+}
+.form__input:focus ~ .form__icon,
+.form__input:not(:placeholder-shown) ~ .form__icon {
+  transform: translateY(-25px);
+}
+
+.form__label {
+  @extend %label;
+}
+.form__icon {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  fill: currentColor;
+  transition: transform 250ms $cubic;
+
+}
+
+// textarea
+.form__message {
+  width: 100%;
+  height: 76px;
+  resize: none;
+  border: 1px solid $primary-color;
+  transition: border 250ms $cubic;
+
+&:focus {
+    border: 1px solid $accent-color;
+    outline: none;
+  }
+
+&:focus + .form__message--label,
+&:not(:placeholder-shown) + .form__message--label{
+  transform: translateX(35px) scale(0.8);
+  }
+  
+&:focus ~ .form__message--icon,
+&:not(:placeholder-shown) ~ .form__message--icon {
+      transform: translateY(-25px);
+    }
+}
+.form__message--label {
+  @extend %label;
+}
+.form__message--icon {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  fill: currentColor;
+  transition: transform 250ms $cubic;
+}
+
+// date
+.form__date {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 20px;
+  color: $primary-color;
+
+&--label {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: $primary-color;
+  }
+
+&--input {
+  width: 200px;
+  height: 30px;
+  padding: 8px;
+  font-size: 14px;
+  border: transparent;
+  border-radius: 6px;
+  background-color: $primary-color;
+  color: $light-text-color;
+  transition: background-color 250ms $cubic;
+}
+&--icon {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  z-index: 999;
+  background-color: $primary-color;
+  pointer-events: none;
+  transition: background-color 250ms $cubic;
+}
+}
+.form__date--input:focus {
+  background-color: $accent-color;
+    outline: none;
+  }
+.form__date--input:focus + .form__date--icon {
+  background-color: $accent-color;
+}
+
+
+
+// payment 
+.form__group--payment {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  margin-bottom: 30px;
+}
+.form__payment {
+  display: flex;
+  align-items: center;
+  color: $primary-color;
+  cursor: pointer;
+
+&--label {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: $primary-color;
+  }
+}
+.form__radio {
+  margin-right: 10px;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid $primary-color;
+  
+&:checked {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M160 256C160 202.1 202.1 160 256 160C309 160 352 202.1 352 256C352 309 309 352 256 352C202.1 352 160 309 160 256zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z' fill='%23ff6c00'/%3E%3C/svg%3E");
+  border: transparent;
+}
+}
+.form__icon--payment {
+  fill: currentColor;
+}
+
+// checkbox 
+.form__agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+
+&--label {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: $primary-color;
+  cursor: pointer;
+}
+
+&--link {
+  @extend %link;
+  font-size: 11px;
+  color: $accent-color;
+}
+}
+
+.form__agreement--checkbox {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  border: 2px solid $primary-color;
+  transition: background-color 250ms $cubic;
+
+&:checked {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z' fill='%23fff'/%3E%3C/svg%3E");
+  background-color: $accent-color;
+  border: transparent;
+  // transition: background-color 3000ms $cubic,
+  // border 3000ms $cubic;
+
+  
+}
+}
+
+.form__btn {
+  @extend %btn-light;
+  margin: 0 auto;
+}

@@ -22,42 +22,39 @@
           <a
             class="header__logo-link"
             href="./index.html"
-            aria-label="BarberSop logo"
+            aria-label="BarberShop logo"
             ><svg class="header__logo-img">
               <use href="./images/symbol-defs.svg#icon-logo"></use></svg
           ></a>
+
+          <!-- mobile-menu -->
+
           <div class="header__content">
             <button
-              class="menu-toggle js-open-menu"
+              class="menu__toggle js-open-menu"
               type="button"
               aria-expanded="false"
               aria-controls="mobile-menu"
             >
               <svg
-                class="menu-toggle__icon"
+                class="menu__toggle--icon"
                 width="40"
                 height="40"
                 aria-label="Oткрытие мобильного меню"
               >
-                <use
-                  class="mobile-button_open"
-                  href="./images/symbol-defs.svg#icon-menu"
-                ></use>
+                <use href="./images/symbol-defs.svg#icon-menu"></use>
               </svg>
             </button>
-            <div class="menu-container js-menu-container" id="mobile-menu">
+            <div class="menu__container js-menu-container" id="mobile-menu">
               <div class="menu__content">
-                <button class="menu-toggle js-close-menu" type="button">
+                <button class="menu__toggle js-close-menu" type="button">
                   <svg
-                    class="menu-toggle__icon"
+                    class="menu__toggle--icon"
                     width="40"
                     height="40"
                     aria-label="Закрытие мобильного меню"
                   >
-                    <use
-                      class="mobile-button_close"
-                      href="./images/symbol-defs.svg#icon-close"
-                    ></use>
+                    <use href="./images/symbol-defs.svg#icon-close"></use>
                   </svg>
                 </button>
                 <div class="menu__breadcrumps">
@@ -1106,29 +1103,36 @@
                 autocomplete="off"
               >
                 <div class="contacts__input-wrapper" role="group">
-                  <label class="contacts__label">
+                  <label class="contacts__field">
                     <input
                       class="contacts__input"
                       type="text"
                       name="name"
-                      placeholder="name*"
-                  /></label>
-                  <label class="contacts__label">
+                      placeholder="John Smith"
+                      required
+                    />
+                    <span class="contacts__label">Name*</span></label
+                  >
+                  <label class="contacts__field">
                     <input
                       class="contacts__input"
                       type="tel"
                       name="phone"
-                      placeholder="phone*"
-                  /></label>
+                      placeholder="+38 (050) 123-58-69"
+                      required
+                    />
+                    <span class="contacts__label">Phone*</span></label
+                  >
                 </div>
-                <label class="contacts__label">
+                <label class="contacts__field">
                   <textarea
                     class="contacts__textarea"
                     name="message"
                     cols="30"
                     rows="10"
-                    placeholder="message"
+                    placeholder="Hello"
                   ></textarea>
+                  <span class="contacts__label">Message</span>
                 </label>
                 <button class="contacts__button" type="submit">Send</button>
               </form>
@@ -1203,6 +1207,135 @@
               <use href="./images/symbol-defs.svg#icon-close"></use>
             </svg>
           </button>
+
+          <!-- Modal form -->
+
+          <form class="form">
+            <p class="form__title">Online booking</p>
+            <div role="group" class="form__group">
+              <label class="form__field">
+                <input
+                  class="form__input"
+                  type="text"
+                  name="user_name"
+                  placeholder=" "
+                  autocomplete="off"
+                  required
+                />
+                <span class="form__label">Name</span>
+                <svg class="form__icon" width="18" height="18">
+                  <use href="./images/symbol-defs.svg#user-icon"></use>
+                </svg>
+              </label>
+              <label class="form__field">
+                <input
+                  class="form__input"
+                  type="tel"
+                  name="tel"
+                  placeholder=" "
+                  autocomplete="off"
+                  maxlength="12"
+                  required
+                />
+                <span class="form__label">Phone number</span>
+                <svg class="form__icon" width="18" height="18">
+                  <use href="./images/symbol-defs.svg#phone-icon"></use>
+                </svg>
+              </label>
+              <label class="form__field">
+                <input
+                  class="form__input"
+                  type="mail"
+                  name="mail"
+                  placeholder=" "
+                  autocomplete="off"
+                  required
+                />
+                <span class="form__label">E-mail</span>
+                <svg class="form__icon" width="18" height="18">
+                  <use href="./images/symbol-defs.svg#mail-icon"></use>
+                </svg>
+              </label>
+            </div>
+
+            <!-- textarea -->
+            <label class="form__field">
+              <textarea
+                class="form__message"
+                name="user_message"
+                rows="5"
+                placeholder=" "
+              ></textarea>
+              <span class="form__message--label">Leave a comment</span>
+              <svg class="form__message--icon" width="18" height="18">
+                <use href="./images/symbol-defs.svg#comment-icon"></use>
+              </svg>
+            </label>
+
+            <!-- calendar -->
+            <label class="form__date">
+              <span class="form__date--label">Choose your date</span>
+              <input
+                class="form__date--input"
+                type="date"
+                name="date"
+                min="2022-11-15"
+                max="2022-11-25"
+              />
+              <svg class="form__date--icon" width="18" height="18">
+                <use href="./images/symbol-defs.svg#calendar-icon"></use>
+              </svg>
+            </label>
+
+            <!-- payment -->
+            <div role="group" class="form__group--payment">
+              <span class="form__payment--label">Choose payment way</span>
+              <label class="form__payment">
+                <input
+                  class="form__radio"
+                  type="radio"
+                  name="payment"
+                  value="visa"
+                  checked
+                />
+                <svg class="form__icon--payment" width="30" height="30">
+                  <use href="./images/symbol-defs.svg#visa-icon"></use>
+                </svg>
+              </label>
+              <label class="form__payment">
+                <input
+                  class="form__radio"
+                  type="radio"
+                  name="payment"
+                  value="master"
+                />
+                <svg class="form__icon--payment" width="30" height="30">
+                  <use href="./images/symbol-defs.svg#master-icon"></use>
+                </svg>
+              </label>
+            </div>
+            <!-- agreement -->
+            <label class="form__agreement">
+              <input
+                class="form__agreement--checkbox"
+                type="checkbox"
+                name="accept"
+              />
+              <span class="form__agreement--label"
+                >Accept
+                <a
+                  class="form__agreement--link"
+                  href="#"
+                  target="_blank"
+                  noopener
+                  noreferrer
+                  nofollow
+                  >Privacy Policy</a
+                ></span
+              >
+            </label>
+            <button class="form__btn" type="submit">Book</button>
+          </form>
         </div>
       </div>
     </main>

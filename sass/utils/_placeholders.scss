@@ -24,10 +24,10 @@
 }
 
 %btn-light {
+  display: block;
   max-width: 250px;
   min-width: 160px;
   min-height: 40px;
-  margin: 0;
   padding: 12px 20px;
   font-weight: 600;
   font-size: 12px;
@@ -107,4 +107,16 @@
 
 %heading-light {
   color: $light-text-color;
+}
+
+%label {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: $primary-color;
+  transition: transform 250ms $cubic;
 }
