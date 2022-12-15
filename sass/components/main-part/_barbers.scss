@@ -17,7 +17,7 @@
   }
 }
 .barbers__list {
-  @extend %list;
+@extend %list;
 display: flex;
 flex-wrap: wrap;
 gap: 64px;
