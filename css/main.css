@@ -24,25 +24,23 @@ img {
 }
 
 .container {
-  padding: 0 31px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    width: 448px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
-    padding: 0 39px;
+    width: 720px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
-    padding: 0 15px;
+    width: 1170px;
   }
 }
 .section {
@@ -320,12 +318,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .header__container {
-    width: 768px;
+    width: 720px;
   }
 }
 @media screen and (min-width: 1200px) {
   .header__container {
-    width: 1200px;
+    width: 1170px;
   }
 }
 .header__wrapper {
@@ -357,14 +355,14 @@ img {
 }
 @media screen and (min-width: 768px) {
   .header__wrapper {
-    width: 768px;
+    width: 720px;
     position: fixed;
-    padding: 0 39px;
+    padding: 0 15px;
   }
 }
 @media screen and (min-width: 1200px) {
   .header__wrapper {
-    width: 1200px;
+    width: 1170px;
     padding: 0 15px;
   }
 }
@@ -1125,7 +1123,7 @@ img {
 .form__radio {
   margin-right: 10px;
   -webkit-appearance: none;
-    -moz-appearance: none;
+     -moz-appearance: none;
           appearance: none;
   width: 14px;
   height: 14px;
@@ -1879,6 +1877,12 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .gallery__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .gallery__item {
